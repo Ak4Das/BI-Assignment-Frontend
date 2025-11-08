@@ -55,7 +55,13 @@ function App() {
   const finalEvents =
     search === ""
       ? filteredEvents
-      : filteredEvents.filter((event) => event.title.toLowerCase().includes(search.toLowerCase()) || event.eventTags.find((tag) => tag.toLowerCase().includes(search.toLowerCase())))
+      : filteredEvents.filter(
+          (event) =>
+            event.title.toLowerCase().includes(search.toLowerCase()) ||
+            event.eventTags.find((tag) =>
+              tag.toLowerCase().includes(search.toLowerCase())
+            )
+        )
 
   function handleChange(e) {
     setType(e.target.value)

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 async function getAllEvents(setEvent) {
   try {
     const response = await fetch(
-      "https://bi-assignment-backend-chi.vercel.app/events"
+      "https://bi-assignment-backend-mz1c.vercel.app/events"
     )
     if (response.ok) {
       const data = await response.json()

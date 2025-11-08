@@ -59,7 +59,7 @@ export default function EventDetails() {
                 <p className="m-0 mb-3 fw-bold">{event.hostedBy}</p>
                 <p className="m-0">Type: </p>
                 <p className="m-0 mb-3 fw-bold">{event.type}</p>
-                <img src={event.bannerUrl} alt="" className="img-fluid d-block mx-auto mx-sm-left"/>
+                <img src={event.bannerUrl} alt="" className="img-fluid"/>
                 <p className="fs-3 fw-bold mt-3">Details: </p>
                 <p style={{ maxWidth: "900px" }}>
                   Lorem Ipsum is simply dummy text of the printing and

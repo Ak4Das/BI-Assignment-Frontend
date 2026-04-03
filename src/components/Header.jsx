@@ -11,10 +11,11 @@ export default function Header({ setSearch }) {
       <div className="container">
         <nav className="navbar py-3">
           <div className="container-fluid">
-            <a className="navbar-brand text-danger">Meetup</a>
+            <a className="navbar-brand text-danger" style={{fontFamily:"lexendDeca"}}>Meetup</a>
             <form className="d-flex" role="search">
               <input
-                className="form-control me-2"
+                className="form-control me-4"
+                style={{width:"250px"}}
                 type="search"
                 placeholder="Search by event title and tags"
                 aria-label="Search"

@@ -30,9 +30,6 @@ export default function AddEventForm() {
   const [speaker2ProfileImage, setSpeaker2ProfileImage] = useState("")
   const [speaker2Name, setSpeaker2Name] = useState("")
   const [speaker2Position, setSpeaker2Position] = useState("")
-  const [speaker3ProfileImage, setSpeaker3ProfileImage] = useState("")
-  const [speaker3Name, setSpeaker3Name] = useState("")
-  const [speaker3Position, setSpeaker3Position] = useState("")
   const [firstTag, setFirstTag] = useState("")
   const [secondTag, setSecondTag] = useState("")
 
@@ -77,15 +74,6 @@ export default function AddEventForm() {
     if (name === "speaker2Position") {
       setSpeaker2Position(value)
     }
-    if (name === "speaker3ProfileImage") {
-      setSpeaker3ProfileImage(value)
-    }
-    if (name === "speaker3Name") {
-      setSpeaker3Name(value)
-    }
-    if (name === "speaker3Position") {
-      setSpeaker3Position(value)
-    }
     if (name === "firstTag") {
       setFirstTag(value)
     }
@@ -116,11 +104,6 @@ export default function AddEventForm() {
             profileImage: speaker2ProfileImage,
             name: speaker2Name,
             position: speaker2Position,
-          },
-          {
-            profileImage: speaker3ProfileImage,
-            name: speaker3Name,
-            position: speaker3Position,
           },
         ],
         eventTags: [firstTag, secondTag],
@@ -361,39 +344,6 @@ export default function AddEventForm() {
               placeholder="Position"
               id="speaker2"
               name="speaker2Position"
-              className="w-100"
-              onChange={handleChangeTwo}
-            />
-            <br />
-            <br />
-            <label htmlFor="speaker3">Speaker - 3</label>
-            <br />
-            <br />
-            <input
-              type="text"
-              placeholder="Profile Image"
-              id="speaker3"
-              name="speaker3ProfileImage"
-              className="w-100"
-              onChange={handleChangeTwo}
-            />
-            <br />
-            <br />
-            <input
-              type="text"
-              placeholder="Name"
-              id="speaker3"
-              name="speaker3Name"
-              className="w-100"
-              onChange={handleChangeTwo}
-            />
-            <br />
-            <br />
-            <input
-              type="text"
-              placeholder="Position"
-              id="speaker3"
-              name="speaker3Position"
               className="w-100"
               onChange={handleChangeTwo}
             />

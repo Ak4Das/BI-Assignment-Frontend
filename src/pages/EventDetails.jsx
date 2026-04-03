@@ -38,7 +38,7 @@ export default function EventDetails() {
         <div className="container">
           <nav className="navbar py-3">
             <div className="container-fluid">
-              <NavLink to="/" className="navbar-brand text-danger">
+              <NavLink to="/" className="navbar-brand text-danger" style={{fontFamily:"lexendDeca"}}>
                 Meetup
               </NavLink>
             </div>
@@ -47,14 +47,14 @@ export default function EventDetails() {
         </div>
       </header>
       {event && (
-        <main className="bg-body-tertiary py-4">
+        <main className="bg-body-tertiary py-4" style={{minHeight:"100vh"}}>
           <div className="container">
             <div
               className="d-md-flex justify-content-between"
               style={{ gap: "100px" }}
             >
               <section>
-                <h2>{event.title}</h2>
+                <h1>{event.title}</h1>
                 <p className="m-0">Hosted By: </p>
                 <p className="m-0 mb-3 fw-bold">{event.hostedBy}</p>
                 <p className="m-0">Type: </p>
@@ -62,16 +62,7 @@ export default function EventDetails() {
                 <img src={event.bannerUrl} alt="" className="img-fluid"/>
                 <p className="fs-3 fw-bold mt-3">Details: </p>
                 <p style={{ maxWidth: "900px" }}>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  {event.details}
                 </p>
                 <p className="fs-3 fw-bold">Additional Information: </p>
                 <p>

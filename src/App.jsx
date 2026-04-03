@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 async function getAllEvents(setEvent) {
   try {
     const response = await fetch(
-      "https://bi-assignment-backend-mz1c.vercel.app/events"
+      "https://bi-assignment-backend-mz1c.vercel.app/events",
     )
     if (response.ok) {
       const data = await response.json()
@@ -59,8 +59,8 @@ function App() {
           (event) =>
             event.title.toLowerCase().includes(search.toLowerCase()) ||
             event.eventTags.find((tag) =>
-              tag.toLowerCase().includes(search.toLowerCase())
-            )
+              tag.toLowerCase().includes(search.toLowerCase()),
+            ),
         )
 
   function handleChange(e) {
@@ -70,13 +70,13 @@ function App() {
   return (
     <>
       <Header setSearch={setSearch} />
-      <main className="bg-body-tertiary">
+      <main className="bg-body-tertiary" style={{ minHeight: "100vh" }}>
         <div className="container">
           <div className="d-flex justify-content-between py-3">
             <h3 className="fw-bold">Meetup Events</h3>
             <select
               id="eventType"
-              className="border border-0"
+              className="border border-0 px-2 py-2"
               onChange={handleChange}
             >
               <option value="">Select Event Type</option>
@@ -101,8 +101,8 @@ function App() {
                       style={{ height: "220px", objectFit: "cover" }}
                     />
                     <p
-                      className="m-0 position-absolute bg-light"
-                      style={{ top: "10px", left: "10px" }}
+                      className="m-0 position-absolute bg-light px-2 rounded-pill"
+                      style={{ top: "15px", left: "15px", fontSize: "12px" }}
                     >
                       {event.type} Event
                     </p>
